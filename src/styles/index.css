@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Lora', serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(135deg, #1a1a1a, #333);
+  color: #f0c040;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.App {
+  text-align: center;
+  padding: 20px;
+}
+
+.App-header {
+  background-color: #333;
+  padding: 20px;
+  border-bottom: 2px solid #f0c040;
+}
+
+.demo-display, .upload-tool, .vlog-display {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 800px;
+  background-color: #222;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.demo-content, .upload-tool form, .vlog-display {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.demo-image, .demo-video, .vlog-video {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #f0c040;
+  border-radius: 4px;
+}
+
+button {
+  background: linear-gradient(135deg, #f0c040, #e0b030);
+  color: #1a1a1a;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background: linear-gradient(135deg, #e0b030, #d0a020);
+  transform: translateY(-2px);
+}
+
+.photo-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.photo-image {
+  max-width: 22%;
+  height: auto;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.photo-image:hover {
+  transform: scale(1.05);
+}
+
+.vlog-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.vlog-video:first-child {
+  max-width: 33%;
+  height: auto;
+}
+
+.vlog-video:nth-child(2) {
+  max-width: 62%;
+  height: auto;
+}
+
+.vlog-video {
+  max-width: 45%;
+  height: auto;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.vlog-video:hover {
+  transform: scale(1.05);
+}
+
+.banner {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+}
+
+.slideshow {
+  display: flex;
+  width: 200%;
+  animation: slide 10s infinite;
+}
+
+.slide {
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+}
+
+@keyframes slide {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+.banner h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #f0c040;
+  font-size: 4em;
+  font-weight: bold;
+} 

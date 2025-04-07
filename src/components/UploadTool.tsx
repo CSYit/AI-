@@ -17,6 +17,7 @@ const UploadTool: React.FC = () => {
       setMessage('请先选择一个文件。');
       return;
     }
+    setMessage('文件上传中...');
 
     const formData = new FormData();
     formData.append('file', file);
@@ -38,6 +39,7 @@ const UploadTool: React.FC = () => {
   return (
     <div className="upload-tool">
       <h2>上传您的图片或ZIP包</h2>
+      <p className="upload-description">收到您的婚纱照底片后，我们会为您生成4套新场景摄影以及MV效果，在24h后返回给您</p>
       <form onSubmit={handleSubmit}>
         <input type="file" onChange={handleFileChange} />
         <button type="submit">上传</button>
